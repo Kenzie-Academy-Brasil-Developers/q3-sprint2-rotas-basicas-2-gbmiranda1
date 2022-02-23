@@ -21,3 +21,4 @@ def current_datetime():
     else:
         msg = "Bom dia!"
     return { "current_datetime": format_time, "message": msg }
+    
