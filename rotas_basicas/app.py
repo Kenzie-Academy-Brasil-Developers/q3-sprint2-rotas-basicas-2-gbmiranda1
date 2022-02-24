@@ -12,11 +12,11 @@ def home():
 
 @app.route('/current_datetime')
 def current_datetime():
-    format_time = now.strftime("%d") + "/"+ now.strftime("%m") + "/" + now.strftime("%Y") + " " + str(now)[11:19] + " " + now.strftime("%P").upper()
+    format_time = now.strftime("%d/%m/%Y %H:%M:%S %p")
     msg = ""
     if int(now.strftime("%H")) > 18:
         msg = "Boa noite!"
-    elif  18 >= int(now.strftime("%H")) >= 12:
+    elif int(now.strftime("%H")) <= 18 and int(now.strftime("%H")) >= 12:
         msg = "Boa tarde!"
     else:
         msg = "Bom dia!"

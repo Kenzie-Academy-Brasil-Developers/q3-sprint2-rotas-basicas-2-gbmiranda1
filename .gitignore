@@ -17,3 +17,4 @@ cover/
 venv/
 **_pycache_/
 **.vscode/
+.env
